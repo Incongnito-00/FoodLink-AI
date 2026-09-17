@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodShare | Smart Food Donation</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         LOGIN SCREEN
+         ===================================================== -->
+
+    <section id="loginScreen" class="login-screen">
+
+        <div class="login-card">
+
+            <div class="logo">
+                🌱
+            </div>
+
+            <h1>FoodShare</h1>
+
+            <p class="tagline">
+                Share Food • Nourish Lives
+            </p>
+
+            <h2>Welcome Back</h2>
+
+            <p class="login-description">
+                Sign in to continue to the Smart Food Donation Platform.
+            </p>
+
+
+            <!-- ROLE SELECTION -->
+
+            <div class="role-buttons">
+
+                <button
+                    id="shopkeeperRoleBtn"
+                    class="role-btn active"
+                    type="button">
+
+                    🏪 Shopkeeper
+
+                </button>
+
+
+                <button
+                    id="ngoRoleBtn"
+                    class="role-btn"
+                    type="button">
+
+                    🤝 NGO
+
+                </button>
+
+            </div>
+
+
+            <!-- LOGIN FORM -->
+
+            <form id="loginForm">
+
+                <div class="input-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        id="password"
+                        type="password"
+                        placeholder="Enter your password"
+                        required>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    type="submit">
+
+                    Sign In
+
+                </button>
+
+            </form>
+
+
+            <p class="login-note">
+
+                Frontend development mode.
+                Real authentication will be connected to Supabase later.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         APPLICATION
+         ===================================================== -->
+
+    <section
+        id="appScreen"
+        class="app-screen hidden">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- BRAND -->
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🌱
+                </div>
+
+                <div>
+
+                    <h2>
+                        FoodShare
+                    </h2>
+
+                    <span>
+                        Smart Food Donation
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="navigation">
+
+
+                <button
+                    class="nav-item active"
+                    data-page="dashboard">
+
+                    🏠 Dashboard
+
+                </button>
+
+
+                <button
+                    class="nav-item shopkeeper-only"
+                    data-page="addFood">
+
+                    ➕ Add Food
+
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="donations">
+
+                    🍱 Donations
+
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="requests">
+
+                    📩 Requests
+
+                </button>
+
+
+                <button
+                    class="nav-item shopkeeper-only"
+                    data-page="device">
+
+                    📡 ESP32 Device
+
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="profile">
+
+                    👤 Profile
+
+                </button>
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+                <div class="quote">
+
+                    "Good food should never go to waste."
+
+                </div>
+
+
+                <button
+                    id="logoutBtn"
+                    class="logout-btn">
+
+                    ↪ Logout
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main class="main-content">
+
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <p class="welcome-small">
+                        FoodShare Platform
+                    </p>
+
+                    <h1 id="pageTitle">
+                        Dashboard
+                    </h1>
+
+                </div>
+
+
+                <div class="user-info">
+
+                    <div
+                        id="userAvatar"
+                        class="user-avatar">
+
+                        U
+
+                    </div>
+
+
+                    <div>
+
+                        <strong id="userName">
+                            User
+                        </strong>
+
+                        <span id="userRole">
+                            User
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- PAGE CONTENT -->
+
+            <div id="pageContent"></div>
+
+        </main>
+
+    </section>
+
+
+
+    <!-- TOAST MESSAGE -->
+
+    <div
+        id="toast"
+        class="toast hidden">
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="./app.js"></script>
+
+</body>
+</html>
