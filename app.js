@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://foodlink-ai-5fxh.onrender.com/api";;
 
 /* =========================================================
    FOODSHARE
